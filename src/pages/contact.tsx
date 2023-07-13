@@ -1,8 +1,8 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Nav from "~/components/nav";
-import BuildPromo from "~/components/buildingspromo";
 import Footer from "~/components/footer";
+import GAnalytics from '~/components/ganalytics';
 
 const Contact: NextPage = () => {
   return (
@@ -11,6 +11,7 @@ const Contact: NextPage = () => {
         <title>Contact | Buildings and More</title>
         <meta name="description" content="Buildings and More Portable Buildings" />
         <link rel="icon" href="/favicon.ico" />
+        <GAnalytics/>
       </Head>
       <Nav/>
       <section className="bg-white dark:bg-gray-900">
@@ -35,8 +36,8 @@ const Contact: NextPage = () => {
                 </div>
               </div>
               <div className="grow ml-6">
-                <p className="font-bold mb-1">Technical support</p>
-                <p className="text-gray-500">info@bambuilding.com</p>
+                <p className="font-bold mb-1">Immediate Support</p>
+                <p className="text-gray-500">info@buildingandmore.com</p>
                 <p className="text-gray-500">(386) 755-6449</p>
               </div>
             </div>
@@ -54,57 +55,30 @@ const Contact: NextPage = () => {
                 </div>
               </div>
               <div className="grow ml-6">
-                <p className="font-bold mb-1">Sales questions</p>
+                <p className="font-bold mb-1">Sales Questions?</p>
                 <p className="text-gray-500">info@buildingandmore.com</p>
                 <p className="text-gray-500">(904) 259-4054</p>
-              </div>
-            </div>
-          </div>
-          <div className="mb-12 grow-0 shrink-0 basis-auto w-full lg:w-6/12 px-3 lg:px-6">
-            <div className="flex align-start">
-              <div className="shrink-0">
-                <div className="p-4 bg-primary-700 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
-                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="newspaper"
-                    className="w-5 text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                    <path fill="currentColor"
-                      d="M552 64H88c-13.255 0-24 10.745-24 24v8H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h472c26.51 0 48-21.49 48-48V88c0-13.255-10.745-24-24-24zM56 400a8 8 0 0 1-8-8V144h16v248a8 8 0 0 1-8 8zm236-16H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm-208-96H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm0-96H140c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h360c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12z">
-                    </path>
-                  </svg>
-                </div>
-              </div>
-              <div className="grow ml-6">
-                <p className="font-bold mb-1">Press</p>
-                <p className="text-gray-500">info@buildingandmore.com</p>
-                <p className="text-gray-500">(904) 259-4054</p>
-              </div>
-            </div>
-          </div>
-          <div className="mb-12 grow-0 shrink-0 basis-auto w-full lg:w-6/12 px-3 lg:px-6">
-            <div className="flex align-start">
-              <div className="shrink-0">
-                <div className="p-4 bg-primary-700 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
-                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bug" className="w-5 text-white"
-                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                      d="M511.988 288.9c-.478 17.43-15.217 31.1-32.653 31.1H424v16c0 21.864-4.882 42.584-13.6 61.145l60.228 60.228c12.496 12.497 12.496 32.758 0 45.255-12.498 12.497-32.759 12.496-45.256 0l-54.736-54.736C345.886 467.965 314.351 480 280 480V236c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v244c-34.351 0-65.886-12.035-90.636-32.108l-54.736 54.736c-12.498 12.497-32.759 12.496-45.256 0-12.496-12.497-12.496-32.758 0-45.255l60.228-60.228C92.882 378.584 88 357.864 88 336v-16H32.666C15.23 320 .491 306.33.013 288.9-.484 270.816 14.028 256 32 256h56v-58.745l-46.628-46.628c-12.496-12.497-12.496-32.758 0-45.255 12.498-12.497 32.758-12.497 45.256 0L141.255 160h229.489l54.627-54.627c12.498-12.497 32.758-12.497 45.256 0 12.496 12.497 12.496 32.758 0 45.255L424 197.255V256h56c17.972 0 32.484 14.816 31.988 32.9zM257 0c-61.856 0-112 50.144-112 112h224C369 50.144 318.856 0 257 0z">
-                    </path>
-                  </svg>
-                </div>
-              </div>
-              <div className="grow ml-6">
-                <p className="font-bold mb-1">New Customers</p>
-                <p className="text-gray-500">Starke, FL 32091</p>
-                <p className="text-gray-500">(904) 966-0077</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <form action="#" className="space-y-8">
-          <div>
+
+
+
+
+
+
+      <form action="https://api.web3forms.com/submit" method="POST" className="space-y-8">
+            <input type="hidden" name="access_key" value="9303649c-c94a-467e-8e7b-ac76bf070fa0"/>
+            <input type="hidden" name="subject" value="New Financing/Leasing Submission"></input>
+            <input type="hidden" name="from_name" value="Buildings And More Portables"></input>
+            <input type="checkbox" name="botcheck" id="" className="hidden"></input>
+            <input type="hidden" name="redirect" value="https://portables.buildingsandmore.com/thank-you"/>
+            <div>
               <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-              <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required/>
+              <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@email.com" required/>
           </div>
           <div>
               <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>

@@ -7,6 +7,8 @@ import BuildTypes from "~/components/buildingtypes";
 import FeaturesOne from "~/components/features-1";
 import TestimonialOne from "~/components/testimonial-1";
 import Image from "next/image";
+import FooterHero from "~/components/footer-hero";
+import GAnalytics from '~/components/ganalytics';
 
 /* eslint-disable */
 function readProductModal(){
@@ -22,20 +24,17 @@ const Home: NextPage = () => {
       <Head>
         <title>Home | Buildings and More</title>
         <meta
-          name="description"
+          name="high-quality storage buildings screen room, carport, utility building, or gazebo"
           content="Buildings and More Portable Buildings"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"
-          rel="stylesheet"
-        />
+        <GAnalytics/>
       </Head>
-      <Nav />
+      <Nav/>
       <section className="bg-white dark:bg-gray-900">
-        <div className="mx-auto max-w-screen-xl py-8 px-4 text-center lg:py-16 lg:px-12">
+        <div className="mx-auto max-w-screen-xl py-4 px-4 text-center lg:py-8 lg:px-12">
           <Link
-            href="/buildingslist"
+            href="/all-buildings"
             className="mb-7 inline-flex items-center justify-between rounded-full bg-gray-100 py-1 px-1 pr-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
             role="alert"
           >
@@ -43,7 +42,7 @@ const Home: NextPage = () => {
               SALE
             </span>{" "}
             <span className="text-sm font-medium">
-              Residential Storage Buildings Here
+              Extended Sale Happening Now
             </span>
             <svg
               className="ml-2 h-5 w-5"
@@ -70,7 +69,7 @@ const Home: NextPage = () => {
           </p>
           <div className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 lg:mb-16">
             <Link
-              href="/buildingslist"
+              href="/all-buildings"
               className="inline-flex items-center justify-center rounded-lg bg-primary-700 py-3 px-5 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
             >
               Our Buildings
@@ -87,21 +86,25 @@ const Home: NextPage = () => {
                 ></path>
               </svg>
             </Link>
-            <a
-              id="readProductButton"
-              data-modal-toggle="readProductModal"
+            <Link
+              href="/contact"
               className="inline-flex items-center justify-center rounded-lg border border-gray-300 py-3 px-5 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            
             >
+             Contact Us
               <svg
-                className="mr-2 -ml-1 h-5 w-5"
+                className="ml-2 -mr-1 h-5 w-5"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
               </svg>
-              Watch video
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -110,12 +113,19 @@ const Home: NextPage = () => {
         <BuildTypes />
       </section>
       <section className="bg-white dark:bg-gray-900">
-        <div className="mx-auto max-w-screen-xl px-4 pb-8 sm:pb-16 lg:px-6">
-          <div className="mb-8 max-w-screen-md lg:mb-16">
-            <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-              Ready for delivery within 7-10 working days
+        <div className="mx-auto max-w-screen-lg px-4 pb-4 sm:pb-16 lg:px-6">
+          <div className="mb-4 lg:mb-8">
+            <Image
+            src="/shipping.png"
+            width={200}
+            height={200}
+            className="mx-auto mb-4"
+            alt="shipping"
+            ></Image>
+            <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">
+              Ready for delivery within 7-10 business days
             </h2>
-            <p className="text-gray-500 dark:text-gray-400 sm:text-xl">
+            <p className="text-gray-500 dark:text-gray-400 sm:text-xl text-center">
               We make it easy! Ordering is simple procedure and with our
               easy-to-navigate 3-D building designer, professional staff waiting
               to assist you, and our well-stocked dealers located throughout the
@@ -130,145 +140,7 @@ const Home: NextPage = () => {
       <section className="bg-white dark:bg-gray-900">
         <TestimonialOne />
       </section>
-      <section className="bg-white dark:bg-gray-900">
-        <div className="mx-auto max-w-screen-xl py-8 px-4 text-center lg:py-16 lg:px-12">
-          <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-4xl">
-            Available Colors
-          </h2>
-          <div className="xs: grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-8  ">
-            <div className="flex flex-col items-center">
-              <Image
-                src="/white.webp"
-                alt="White"
-                className="w-full"
-                width="100"
-                height="100"
-              />
-              <span className="mt-2">White</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/evergreen.webp"
-                alt="Green"
-                className="w-full"
-                width="100"
-                height="100"
-              />
-              <span className="mt-2">Evergreen</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/burgundy.webp"
-                alt="Burgundy"
-                className="w-full"
-                width="100"
-                height="100"
-              />
-              <span className="mt-2">Burgundy</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/beige.webp"
-                alt="Beige"
-                className="w-full"
-                width="100"
-                height="100"
-              />
-              <span className="mt-2">Beige</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/tan.webp"
-                alt="Tan"
-                className="w-full"
-                width="100"
-                height="100"
-              />
-              <span className="mt-2">Tan</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/sand.webp"
-                alt="Sand"
-                className="w-full"
-                width="100"
-                height="100"
-              />
-              <span className="mt-2">Sand</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/clay.webp"
-                alt="Clay"
-                className="w-full"
-                width="100"
-                height="100"
-              />
-              <span className="mt-2">Clay</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/brown.webp"
-                alt="Brown"
-                className="w-full"
-                width="100"
-                height="100"
-              />
-              <span className="mt-2">Brown</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/blue.webp"
-                alt="Blue"
-                className="w-full"
-                width="100"
-                height="100"
-              />
-              <span className="mt-2">Blue</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/gray.webp"
-                alt="Gray"
-                className="w-full"
-                width="100"
-                height="100"
-              />
-              <span className="mt-2">Gray</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/quaker.webp"
-                alt="Quaker"
-                className="w-full"
-                width="100"
-                height="100"
-              />
-              <span className="mt-2">Quaker</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/black.webp"
-                alt="Black"
-                className="w-full"
-                width="100"
-                height="100"
-              />
-              <span className="mt-2">Black</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/barn-red.webp"
-                alt="Barn Red"
-                className="w-full"
-                width="100"
-                height="100"
-              />
-              <span className="mt-2">Barn Red</span>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       <div
         id="readProductModal"
@@ -316,7 +188,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-
+<FooterHero/>
       <Footer />
     </>
   );

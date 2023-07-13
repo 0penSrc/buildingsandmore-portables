@@ -3,7 +3,7 @@ import Head from "next/head";
 import Nav from "~/components/nav";
 import Footer from "~/components/footer";
 import FinancingPage from "~/components/financing";
-import EcomCard from "~/components/ecomcard";
+import GAnalytics from '~/components/ganalytics';
 
 const Financing: NextPage = () => {
     return (
@@ -12,6 +12,7 @@ const Financing: NextPage = () => {
           <title>Financing | Buildings and More</title>
           <meta name="description" content="Buildings and More Portable Buildings" />
           <link rel="icon" href="/favicon.ico" />
+          <GAnalytics/>
         </Head>
         <Nav/>
         <section className="bg-white dark:bg-gray-900"><FinancingPage/></section>
