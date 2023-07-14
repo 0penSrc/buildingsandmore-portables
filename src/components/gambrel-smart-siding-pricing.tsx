@@ -2,24 +2,39 @@ import { useState } from "react"
 import Stars from "./stars"
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const GambrelSmartSidingPricing = () => {
 
-    const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
-    const handleImageClick = (imageId) => {
-      setSelectedImage(imageId);
-    };
-  
-    const isImageSelected = (imageId) => {
-      return selectedImage === imageId;
-    };
+  const handleImageClick = (imageId) => {
+    setSelectedImage(imageId);
+  };
 
-    const [selectedOption, setSelectedOption] = useState("10x10");
+  const isImageSelected = (imageId) => {
+    return selectedImage === imageId;
+  };
 
-    const handleOptionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-      setSelectedOption(event.target.value);
-    };
+
+  const router = useRouter();
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleOptionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const optionValue = event.target.value;
+    setSelectedOption(optionValue);
+    router.push(`gambrel-lofted-barn-smart-siding/?selectedOption=${optionValue}`);
+  };
+
+  useEffect(() => {
+    const { selectedOption } = router.query;
+    if (selectedOption) {
+      setSelectedOption(selectedOption as string);
+    }
+  }, [router.query]);
+
+
   
     const getPrice = (option: string) => {
       switch (option) {

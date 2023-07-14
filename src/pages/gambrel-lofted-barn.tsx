@@ -13,7 +13,7 @@ const GambrielLofted: NextPage = () => {
     return (
       <>
         <Head>
-          <title>Gambriel Lofted Barn | Buildings and More</title>
+          <title>Gambrel Lofted Barn | Buildings and More</title>
           <meta name="description" content="Buildings and More Portable Buildings" />
           <link rel="icon" href="/favicon.ico" />
           <GAnalytics/>
